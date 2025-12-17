@@ -773,6 +773,11 @@ footer p {
   max-width: 150px;
   max-height: 150px;
 }
+
+.hero-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px var(--accent1), 0 0 70px var(--accent2);
+}
   
   .filters {
     gap: 8px;
