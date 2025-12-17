@@ -770,6 +770,8 @@ footer p {
   box-shadow: 0 0 20px var(--accent1-soft);
   margin: 16px auto;
   display: block;
+  max-width: 150px;
+  max-height: 150px;
 }
   
   .filters {
