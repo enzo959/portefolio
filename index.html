@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Porte-folio — Courvalet Enzo</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <meta name="description" content="Porte-folio professionnel — Projets, Compétences et Contact" />
+</head>
+<body>
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <div class="nav-inner">
+        <a class="brand" href="#accueil">Courvalet Enzo</a>
+
+        <!-- mobile hamburger -->
+        <button id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- theme toggle -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Basculer thème">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero" aria-labelledby="hero-title">
+      <div class="hero-content container">
+        <h1 id="hero-title">Courvalet Enzo</h1>
+        <p class="subtitle">Étudiant en informatique — développeur & passionné.</p>
+        <a href="#projets" class="cta-button">Découvrir mes projets</a>
+
+        <div class="visit-counter" id="visit-counter" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="apropos" class="about container" aria-labelledby="about-title">
+      <h2 id="about-title">À propos</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Étudiant passionné en informatique, je me spécialise dans le développement web et la programmation. 
+          Mon parcours m'a permis d'acquérir des compétences solides en développement front-end et back-end.</p>
+          <p>Curieux et toujours à la recherche de nouveaux défis, je suis constamment en train d'apprendre 
+          de nouvelles technologies pour améliorer mes compétences.</p>
+        </div>
+        <div class="cv-download">
+          <div class="cv-card">
+            <div class="cv-icon">📄</div>
+            <h3>Mon CV</h3>
+            <p>Téléchargez mon curriculum vitae complet</p>
+            <a href="static/CV_Courvalet_Enzo.pdf" download="CV_Courvalet_Enzo.pdf" class="download-btn">
+              <span>⬇️</span> Télécharger le CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="projects container" aria-labelledby="projects-title">
+      <h2 id="projects-title">Mes Projets</h2>
+
+      <!-- filters -->
+      <div class="filters" role="toolbar" aria-label="Filtres des projets">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="games">Jeux</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+      </div>
+
+      <!-- carousel -->
+      <div class="carousel" id="carousel" aria-roledescription="carousel">
+        <button class="carousel-nav prev" aria-label="Projet précédent">‹</button>
+
+        <div class="carousel-track" id="carousel-track">
+          <article class="project-card" data-category="games">
+            <h3>Jeu Terminal</h3>
+            <p>Petit jeu en Python pour le terminal. Algorithmes et logique.</p>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <h3>Puissance 4 — Site</h3>
+            <p>Version web d'un Puissance 4 avec IA (minimax).</p>
+          </article>
+
+          <article class="project-card" data-category="python">
+            <h3>Script d'automatisation</h3>
+            <p>Automatisation d'une tâche avec Python et fichiers CSV.</p>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <h3>Portfolio (this)</h3>
+            <p>Site responsive avec animations et mode sombre/clair.</p>
+          </article>
+        </div>
+
+        <button class="carousel-nav next" aria-label="Projet suivant">›</button>
+
+        <!-- dots -->
+        <div class="carousel-dots" id="carousel-dots" role="tablist"></div>
+      </div>
+
+      <!-- fallback grid for screens where carousel collapsed -->
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card" data-category="games">
+          <h3>Jeu Terminal</h3>
+          <p>Petit jeu en Python pour le terminal. Algorithmes et logique.</p>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <h3>Puissance 4 — Site</h3>
+          <p>Version web d'un Puissance 4 avec IA (minimax).</p>
+        </article>
+
+        <article class="project-card" data-category="python">
+          <h3>Script d'automatisation</h3>
+          <p>Automatisation d'une tâche avec Python et fichiers CSV.</p>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <h3>Portfolio (this)</h3>
+          <p>Site responsive avec animations et mode sombre/clair.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="competences" class="container" aria-labelledby="skills-title">
+      <h2 id="skills-title">Compétences</h2>
+      <div class="skills-container">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Go</span>
+      </div>
+    </section>
+
+    <section id="contact" class="container" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/mdkvrzzo" method="POST" novalidate>
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" required aria-required="true" />
+          <div class="field-error" id="err-nom" aria-live="polite"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required aria-required="true" />
+          <div class="field-error" id="err-email" aria-live="polite"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required aria-required="true"></textarea>
+          <div class="field-error" id="err-message" aria-live="polite"></div>
+        </div>
+
+        <!-- honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+        <button id="submit-btn" type="submit">Envoyer</button>
+
+        <div id="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Courvalet Enzo. Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" title="Twitter" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/app.js"></script>
+</body>
+</html>
